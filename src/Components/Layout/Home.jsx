@@ -16,6 +16,7 @@ const projects = [
   { day: "05", title: "Joke App", path: "/joke-app" },
   { day: "06", title: "Weather App", path: "/weather-app" },
   { day: "07", title: "Shopping", path: "/shoppingcart" },
+  { day: "08", title: "Blog Post", path: "/blog" },
 ];
 
 export default function Home() {

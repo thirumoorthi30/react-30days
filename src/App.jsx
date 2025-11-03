@@ -17,6 +17,7 @@ import Login from "./Components/Auth/Login";
 import Signup from "./Components/Auth/Signup";
 import Weather from "./Components/Weather/Weather";
 import Shopping from "./Components/ShoppingCart/Shopping";
+import Blog from "./Components/Blog/Blog";
 
 export const userContext = createContext();
 export const themeContext = createContext();
@@ -73,6 +74,7 @@ function AppContent() {
               <Route path="/joke-app" element={<JokeApp />} />
               <Route path="/weather-app" element={<Weather />} />
               <Route path="/shoppingcart" element={<Shopping />} />
+              <Route path="/blog" element={<Blog />} />
               <Route path="*" element={<Navigate to="/" />} />
             </>
           )}
