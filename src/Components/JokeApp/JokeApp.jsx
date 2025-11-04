@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import Layout from "../Layout/Layout";
+import Layout from "../Pages/Layout";
 import { themeContext } from "../../App";
 
 function JokeApp() {

@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { useContext, useState } from "react";
-import { userContext, themeContext } from "../../App"; // ✅ Import both contexts
+import { userContext, themeContext } from "../../App";
 
 let userLabel = "Thiru";
 
@@ -20,7 +20,6 @@ export default function NavBar() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
 
-          {/* Logo */}
           <Link
             to="/"
             className="text-white font-bold text-xl sm:text-2xl hover:text-yellow-300 transition"
@@ -30,7 +29,6 @@ export default function NavBar() {
 
           <div className="flex items-center space-x-6">
 
-            {/* Home Link */}
             {isActive("/") ? (
               <button
                 hidden
@@ -47,7 +45,6 @@ export default function NavBar() {
               </Link>
             )}
 
-            {/* ✅ Theme Toggle Switch */}
             <button
               onClick={toggleTheme}
               className="w-14 h-7 flex items-center bg-gray-300 dark:bg-gray-700 rounded-full p-1 relative transition duration-300"
@@ -62,7 +59,6 @@ export default function NavBar() {
               </div>
             </button>
 
-            {/* User Profile / Dropdown */}
             <div className="relative">
               {user ? (
                 <>

@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import Layout from "../Layout/Layout";
+import Layout from "../Pages/Layout";
 import { themeContext } from "../../App";
 import useSWR from "swr";
 import fetcher from "../../utils/fetcher";
