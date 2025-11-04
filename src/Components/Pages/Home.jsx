@@ -26,10 +26,14 @@ export default function Home() {
   return (
     <div
       className={`min-h-[calc(100vh-64px)] p-6 ${
-        isDark ? "bg-gray-900" : "bg-bgColor"
+        isDark ? "bg-gray-900 text-white" : "bg-bgColor text-gray-900"
       }`}
     >
-      <h1 className="text-4xl font-bold text-center mb-10 text-blue-700 dark:text-yellow-300">
+      <h1
+        className={`text-4xl font-bold text-center mb-10 ${
+          isDark ? "text-yellow-300" : "text-blue-700"
+        }`}
+      >
         🚀 React 30-Day Challenge
       </h1>
 
@@ -38,21 +42,26 @@ export default function Home() {
           <Link
             key={p.day}
             to={p.path}
-            className="
-              block p-6 
-              rounded-xl shadow-md 
-              bg-white text-gray-800 
-              dark:bg-gray-800 dark:text-gray-200 
-              border border-gray-200 dark:border-gray-700
-              hover:bg-blue-200 dark:hover:bg-blue-700
-              hover:shadow-xl hover:-translate-y-1 
-              transition transform duration-300
-            "
+            className={`
+              block p-6 rounded-xl shadow-md border transition transform duration-300 
+              hover:shadow-xl hover:-translate-y-1
+              ${
+                isDark
+                  ? "bg-gray-800 border-gray-700 text-gray-200 hover:bg-blue-700"
+                  : "bg-white border-gray-200 text-gray-800 hover:bg-blue-200"
+              }
+            `}
           >
-            <h2 className="text-xl font-semibold text-green-700 dark:text-green-300">
+            <h2
+              className={`text-xl font-semibold ${
+                isDark ? "text-green-300" : "text-green-700"
+              }`}
+            >
               Day {p.day}
             </h2>
-            <p className="text-gray-700 dark:text-gray-400 mt-2">{p.title}</p>
+            <p className={`${isDark ? "text-gray-400" : "text-gray-700"} mt-2`}>
+              {p.title}
+            </p>
           </Link>
         ))}
       </div>

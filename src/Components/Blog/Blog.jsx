@@ -1,11 +1,12 @@
 import React, { useContext, useState } from "react";
-import Layout from "../Layout/Layout";
+import Layout from "../Pages/Layout";
 import { themeContext } from "../../App";
 
 export default function BlogApp() {
   const [posts, setPosts] = useState([]);
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
+  const [editId, setEditId] = useState(null);
 
   const { theme } = useContext(themeContext);
   const isDark = theme === "dark";
@@ -15,23 +16,46 @@ export default function BlogApp() {
 
     if (!title.trim() || !content.trim()) return;
 
-    const newPost = {
-      id: Date.now(),
-      title,
-      content,
-    };
-
-    setPosts((prev) => [...prev, newPost]);
+    if (editId) {
+      setPosts((prev) =>
+        prev.map((post) =>
+          post.id === editId ? { ...post, title, content } : post
+        )
+      );
+      setEditId(null);
+    } else {
+      setPosts([...posts, { id: Date.now(), title, content }]);
+    }
 
     setTitle("");
     setContent("");
   };
 
+  const handleDelete = (id) => {
+    setPosts(posts.filter((post) => post.id !== id));
+  };
+
+  const handleEdit = (post) => {
+    setTitle(post.title);
+    setContent(post.content);
+    setEditId(post.id);
+  };
+
   return (
     <Layout>
-      <div className={`min-h-[84vh] p-6 flex justify-center ${isDark ? "bg-gray-900" : "bg-bgColor"}`}>
-        <div className={`w-full max-w-2xl shadow-lg rounded-xl p-5 ${isDark ? "bg-gray-800" : "bg-red-100"}`}>
-          <h1 className="text-2xl font-bold text-center text-blue-600 mb-5">Blog</h1>
+      <div
+        className={`min-h-[84.40vh] p-6 flex justify-center ${
+          isDark ? "bg-gray-900" : "bg-bgColor"
+        }`}
+      >
+        <div
+          className={`w-full max-w-2xl shadow-lg rounded-xl p-5 ${
+            isDark ? "bg-gray-800" : "bg-white"
+          }`}
+        >
+          <h1 className="text-2xl font-bold text-center text-blue-600 mb-5">
+            Blog
+          </h1>
 
           <form onSubmit={handleSubmit} className="space-y-3 mb-6">
             <input
@@ -53,7 +77,7 @@ export default function BlogApp() {
               type="submit"
               className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700"
             >
-              Add Blog
+              {editId ? "Update Blog" : "Add Blog"}
             </button>
           </form>
 
@@ -62,9 +86,28 @@ export default function BlogApp() {
           ) : (
             <div className="space-y-3">
               {posts.map((post) => (
-                <div key={post.id} className="p-4 border rounded-lg bg-gray-50 shadow">
+                <div
+                  key={post.id}
+                  className="p-4 border rounded-lg bg-gray-50 shadow"
+                >
                   <h2 className="font-bold text-lg">{post.title}</h2>
                   <p className="text-gray-700 mb-2">{post.content}</p>
+
+                  <div className="flex gap-3">
+                    <button
+                      className="px-3 py-1 bg-green-500 text-white rounded hover:bg-green-600"
+                      onClick={() => handleEdit(post)}
+                    >
+                      Edit
+                    </button>
+
+                    <button
+                      className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600"
+                      onClick={() => handleDelete(post.id)}
+                    >
+                      Delete
+                    </button>
+                  </div>
                 </div>
               ))}
             </div>
