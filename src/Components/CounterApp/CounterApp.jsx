@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import Layout from "../Layout/Layout";
+import Layout from "../Pages/Layout";
 import { themeContext } from "../../App";
 import CounterButton from "./CounterButton";
 
@@ -11,7 +11,7 @@ const CounterApp = () => {
   return (
     <Layout>
       <div
-        className={`flex flex-col items-center justify-center min-h-[94vh] 
+        className={`flex flex-col items-center justify-center min-h-[calc(100vh-109px)] 
       ${isDark ? "bg-gray-900" : "bg-bgColor"}`}
       >
         <div className="border border-yellow-300 dark:border-yellow-700 shadow-lg rounded-2xl p-8 text-center w-80">
@@ -20,14 +20,21 @@ const CounterApp = () => {
           <p className="text-5xl font-extrabold mb-8 text-red-800">{count}</p>
 
           <div className="flex gap-4 justify-center">
-            <CounterButton onClick={() => count > 0 && setCount(count - 1)} text="-" disabled={count === 0} />
-            <CounterButton onClick={() => count < 10 && setCount(count + 1)} text="+" />
+            <CounterButton
+              onClick={() => count > 0 && setCount(count - 1)}
+              text="-"
+              disabled={count === 0}
+            />
+            <CounterButton
+              onClick={() => count < 10 && setCount(count + 1)}
+              text="+"
+            />
             <CounterButton onClick={() => setCount(0)} text="Reset" />
           </div>
         </div>
       </div>
     </Layout>
-  );  
+  );
 };
 
 export default CounterApp;

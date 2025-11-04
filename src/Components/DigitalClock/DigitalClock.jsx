@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import Layout from "../Layout/Layout";
+import Layout from "../Pages/Layout";
 import { themeContext } from "../../App";
 
 export default function DigitalClock() {
@@ -25,7 +25,7 @@ export default function DigitalClock() {
   return (
     <Layout>
       <div
-        className={`flex items-center justify-center min-h-[calc(100vh-64px)] 
+        className={`flex items-center justify-center min-h-[calc(100vh-109px)] 
         ${isDark ? "bg-gray-900" : "bg-bgColor"}`}
       >
         <div

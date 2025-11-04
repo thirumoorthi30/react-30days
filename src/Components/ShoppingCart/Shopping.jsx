@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { useCartStore } from "../../store/useCartStore";
 import { themeContext } from "../../App";
 import { FiShoppingCart, FiX } from "react-icons/fi";
-import Layout from "../Layout/Layout";
+import Layout from "../Pages/Layout";
 
 const products = [
   { id: 1, name: "Shoes", price: 1200 },
@@ -25,7 +25,7 @@ export default function App() {
   return (
     <Layout>
     <div
-      className={`min-h-screen p-8 transition-colors duration-300 font-sans ${
+      className={`min-h-[calc(100vh-64px)] p-8 transition-colors duration-300 font-sans ${
         isDark ? "bg-gray-900 text-white" : "bg-gray-100 text-gray-900"
       }`}
     >

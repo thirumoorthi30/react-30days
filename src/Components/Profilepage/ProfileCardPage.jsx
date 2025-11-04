@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import ProfileCard from "./ProfileCard";
-import Layout from "../Layout/Layout";
+import Layout from "../Pages/Layout";
 import { themeContext } from "../../App";
 
 function ProfileCardPage() {
