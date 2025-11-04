@@ -1,0 +1,5 @@
+import{r as e,t as d,j as t}from"./index-D8O9hlVZ.js";import{L as m}from"./Layout-BMXIhmtk.js";function p(){const[s,n]=e.useState(""),[o,l]=e.useState(""),{theme:c}=e.useContext(d),i=c==="dark";return e.useEffect(()=>{const r=()=>{const a=new Date;n(a.toLocaleTimeString()),l(a.toDateString())};r();const x=setInterval(r,1e3);return()=>clearInterval(x)},[]),t.jsx(m,{children:t.jsx("div",{className:`flex items-center justify-center min-h-[calc(100vh-109px)] 
+        ${i?"bg-gray-900":"bg-bgColor"}`,children:t.jsxs("div",{className:`\r
+            shadow-2xl rounded-3xl px-12 py-8 text-center border border-gray-300 dark:border-gray-700\r
+            transition-transform duration-500 hover:scale-110\r
+          `,children:[t.jsx("p",{className:"text-2xl mb-2 font-semibold animate-pulse text-blue-600 dark:text-blue-400",children:"Digital Clock"}),t.jsx("p",{className:"text-6xl font-bold text-green-600 dark:text-green-400",children:s}),t.jsx("p",{className:"text-xl mt-2 text-gray-600 dark:text-gray-400",children:o})]})})})}export{p as default};

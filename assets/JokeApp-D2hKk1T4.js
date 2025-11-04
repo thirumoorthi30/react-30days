@@ -1,0 +1,6 @@
+import{r,t as d,j as e}from"./index-D8O9hlVZ.js";import{L as x}from"./Layout-BMXIhmtk.js";function g(){const[o,a]=r.useState(""),[n,c]=r.useState(""),s=()=>{fetch("https://official-joke-api.appspot.com/random_joke").then(t=>{if(t.ok)return t.json();throw new Error("Something went wrong...")}).then(t=>a(t)).catch(t=>c(t.message))};r.useEffect(()=>{s()},[]);const{theme:i}=r.useContext(d),l=i==="dark";return e.jsx(x,{children:e.jsxs("div",{className:`flex flex-col items-center justify-center min-h-[94vh] text-center p-6 transition-all
+        ${l?"bg-gray-900":"bg-bgColor"}`,children:[e.jsx("h1",{className:"text-3xl font-bold mb-6 text-orange-600 dark:text-orange-400",children:"Joke App"}),e.jsxs("div",{className:"border border-gray-300 dark:border-green-700 shadow-lg rounded-xl p-6 w-full sm:w-96 transition-all",children:[e.jsxs("p",{className:"text-lg mb-6 text-green-800 dark:text-green-800 transition-colors duration-300",children:[o.setup," — ",o.punchline]}),e.jsx("button",{onClick:s,className:`\r
+              px-6 py-2 rounded-lg font-medium transition-colors \r
+              bg-orange-600 text-white hover:bg-orange-700\r
+              dark:bg-orange-500 dark:hover:bg-orange-600\r
+            `,children:"Get Another Joke"})]}),n&&e.jsx("p",{className:"mt-4 text-red-600 dark:text-red-400",children:n})]})})}export{g as default};

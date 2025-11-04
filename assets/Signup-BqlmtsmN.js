@@ -1,0 +1,8 @@
+import{r as a,u as c,t as x,b,j as e,L as m}from"./index-D8O9hlVZ.js";function p(){const[s,l]=a.useState(""),[n,o]=a.useState(""),{handleSignup:i}=a.useContext(c),{theme:u}=a.useContext(x),g=b(),d=r=>{r.preventDefault(),i(s,n),g("/")},t=u==="dark";return e.jsx("div",{className:`flex items-center justify-center min-h-screen 
+      ${t?"bg-gray-900":"bg-green-50"}`,children:e.jsxs("form",{onSubmit:d,className:`p-8 rounded-xl shadow-md w-96 border
+        ${t?"bg-gray-800 text-white border-gray-700":"bg-white text-black"}`,children:[e.jsx("h2",{className:`text-2xl font-bold text-center mb-6 
+          ${t?"text-yellow-400":"text-green-600"}`,children:"Signup"}),e.jsx("input",{type:"email",placeholder:"Email",className:`w-full p-3 border rounded-lg mb-4 focus:outline-none 
+          ${t?"bg-gray-700 border-gray-600 text-white placeholder-gray-400":"bg-white border-gray-300 text-black"}`,value:s,onChange:r=>l(r.target.value),required:!0}),e.jsx("input",{type:"password",placeholder:"Password",className:`w-full p-3 border rounded-lg mb-4 focus:outline-none 
+          ${t?"bg-gray-700 border-gray-600 text-white placeholder-gray-400":"bg-white border-gray-300 text-black"}`,value:n,onChange:r=>o(r.target.value),required:!0}),e.jsx("button",{type:"submit",className:`w-full py-2 rounded-lg transition 
+          ${t?"bg-yellow-500 hover:bg-yellow-600 text-black":"bg-green-600 hover:bg-green-700 text-white"}`,children:"Signup"}),e.jsx("p",{className:"text-center mt-4",children:e.jsx(m,{to:"/login",className:`font-medium hover:underline 
+            ${t?"text-yellow-400":"text-blue-600"}`,children:"Login"})})]})})}export{p as default};
