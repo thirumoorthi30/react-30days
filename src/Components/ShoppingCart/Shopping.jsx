@@ -25,7 +25,7 @@ export default function App() {
   return (
     <Layout>
     <div
-      className={`min-h-[calc(100vh-64px)] p-8 transition-colors duration-300 font-sans ${
+      className={`min-h-[84.40vh] p-8 transition-colors duration-300 font-sans ${
         isDark ? "bg-gray-900 text-white" : "bg-gray-100 text-gray-900"
       }`}
     >
