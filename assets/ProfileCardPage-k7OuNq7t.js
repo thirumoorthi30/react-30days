@@ -1,4 +1,4 @@
-import{r as l,t as i,j as e}from"./index-D8O9hlVZ.js";import{L as m}from"./Layout-BMXIhmtk.js";function d({name:r,role:t,email:n,phone:a}){const{theme:o}=l.useContext(i),s=o==="dark";return e.jsxs("div",{className:`rounded-2xl shadow-lg p-6 w-72 text-center
+import{r as l,t as i,j as e}from"./index-BB8Q-ByP.js";import{L as m}from"./Layout-DpfiyqMi.js";function d({name:r,role:t,email:n,phone:a}){const{theme:o}=l.useContext(i),s=o==="dark";return e.jsxs("div",{className:`rounded-2xl shadow-lg p-6 w-72 text-center
         transform transition duration-300 hover:scale-105 hover:shadow-2xl
         border border-gray-300 dark:border-gray-700
         ${s?"bg-gray-900":"bg-bgColor"}
@@ -10,4 +10,4 @@ import{r as l,t as i,j as e}from"./index-D8O9hlVZ.js";import{L as m}from"./Layou
           mt-4 px-4 py-2 rounded-full font-medium transition\r
           bg-green-600 text-white hover:bg-green-700\r
           dark:bg-green-500 dark:hover:bg-green-600\r
-        `,children:"View Profile"})]})}function g(){const{theme:r}=l.useContext(i),t=r==="dark",n=[{name:"Thiru",role:"Frontend Developer",email:"thiru@example.com",phone:"123-456-7890"},{name:"Ram",role:"Backend Developer",email:"ram@example.com",phone:"987-654-3210"},{name:"Ravi",role:"UI/UX Designer",email:"ravi@example.com",phone:"555-234-6789"},{name:"Raju",role:"DevOps Engineer",email:"raju@example.com",phone:"555-987-6543"}];return e.jsx(m,{children:e.jsx("div",{className:`min-h-[94vh] flex flex-wrap justify-center items-center gap-6 p-10 transition-all ${t?"bg-gray-900":"bg-bgColor"}`,children:n.map((a,o)=>e.jsx(d,{...a},o))})})}export{g as default};
+        `,children:"View Profile"})]})}function g(){const{theme:r}=l.useContext(i),t=r==="dark",n=[{name:"Thiru",role:"Frontend Developer",email:"thiru@example.com",phone:"123-456-7890"},{name:"Ram",role:"Backend Developer",email:"ram@example.com",phone:"987-654-3210"},{name:"Ravi",role:"UI/UX Designer",email:"ravi@example.com",phone:"555-234-6789"},{name:"Raju",role:"DevOps Engineer",email:"raju@example.com",phone:"555-987-6543"}];return e.jsx(m,{children:e.jsx("div",{className:`min-h-[84.40vh] flex flex-wrap justify-center items-center gap-6 p-10 transition-all ${t?"bg-gray-900":"bg-bgColor"}`,children:n.map((a,o)=>e.jsx(d,{...a},o))})})}export{g as default};
