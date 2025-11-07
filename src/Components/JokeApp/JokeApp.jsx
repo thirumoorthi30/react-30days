@@ -26,7 +26,7 @@ function JokeApp() {
   return (
     <Layout>
       <div
-        className={`flex flex-col items-center justify-center min-h-[94vh] text-center p-6 transition-all
+        className={`flex flex-col items-center justify-center min-h-[84.40vh] text-center p-6 transition-all
         ${isDark ? "bg-gray-900" : "bg-bgColor"}`}
       >
         <h1 className="text-3xl font-bold mb-6 text-orange-600 dark:text-orange-400">

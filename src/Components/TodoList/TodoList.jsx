@@ -106,7 +106,7 @@ const TodoList = () => {
   return (
     <Layout>
       <div
-        className={`min-h-[84.5vh] flex flex-col items-center p-10 w-full
+        className={`min-h-[84.40vh] flex flex-col items-center p-10 w-full
         ${isDark ? "bg-gray-900 text-white" : "bg-gray-100 text-black"}`}
       >
         <h2 className="text-3xl font-bold mb-8">Todo List</h2>
