@@ -36,7 +36,7 @@ function ProfileCardPage() {
   return (
     <Layout>
       <div
-        className={`min-h-[94vh] flex flex-wrap justify-center items-center gap-6 p-10 transition-all ${
+        className={`min-h-[84.40vh] flex flex-wrap justify-center items-center gap-6 p-10 transition-all ${
           isDark ? "bg-gray-900" : "bg-bgColor"
         }`}
       >
